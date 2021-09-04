@@ -1,9 +1,28 @@
 
 # Notice Board
-
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0. <br/>
 Notice Board is a Platform that Shares Daily Activities & Updates to Students. 
+
+
+
+# User
+Admin - Can Read, Update, Add, Delete, Filter Notes. <br>
+Use this cred to login
+```bash
+{
+  username: 'admin_school',
+  password: 'admin@123',
+}
+```
+
+Student - Can Read, Filter Notes. <br>
+Use this cred to login
+```bash
+{
+  username: 'saurabh_patel',
+  password: 'saurabh@123',
+}
+```
 
 
 
@@ -22,7 +41,7 @@ json-server --watch db.json - The server will listen on port `http://localhost:3
 ```
 
 
-## ## Code scaffolding
+## Code scaffolding
 ```bash
 ng generate component component-name` to generate a new component.
 Examples ng generate directive|pipe|service|class|guard|interface|enum|module
