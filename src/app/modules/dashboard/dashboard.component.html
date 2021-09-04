@@ -1,0 +1,44 @@
+<div class="container">
+
+  <div class="d-flex w-100 justify-content-center position-relative align-items-center py-2">
+    <h1 class="mb-0">Notice Board</h1>
+    <button mat-mini-fab color="accent" class="logout" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center w-100 text-center mt-4">
+    <mat-form-field class="mx-2 example-form-field pb-0" appearance="fill">
+      <mat-label>Search Notes</mat-label>
+      <input matInput type="text" name="search" [formControl]='myControl' placeholder="Search">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-slide-toggle
+      class="mx-2 mb-3"
+      color="color"
+      (change)="onSortChange($event)"
+      [checked]="isDateFilter">
+      Sort By Date
+    </mat-slide-toggle>
+    <button *ngIf="role === 'admin'" class="mb-3 mx-2" mat-raised-button color="primary" (click)="AddEdit()">Add New Note</button>
+  </div>
+  <div class="d-flex w-100 h-100 flex-wrap justify-content-start align-items-start">
+    <mat-card *ngFor="let note of notes" class="card mx-2">
+      <mat-card-title>{{note.title}}</mat-card-title>
+      <mat-card-subtitle>{{note.uploadedAt | date}}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{note.desc}}</p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="role === 'admin'">
+        <button (click)="AddEdit(note)" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="deleteNote(note)" mat-mini-fab color="warn" class="mx-2" aria-label="Example icon button with a menu icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

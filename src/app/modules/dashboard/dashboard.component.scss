@@ -1,0 +1,16 @@
+.card {
+  margin: 25px 0;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  max-width: 300px;
+}
+
+.logout {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.example-form-field {
+  border: none;
+  border-radius: 25px;
+}

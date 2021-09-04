@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "_saurabh_patel_",
+      "name": "Saurabh Patel",
+      "password": "abc@123",
+      "role": "student"
+    },
+    {
+      "id": 2,
+      "username": "_krunal_patel_",
+      "name": "Krunal Patel",
+      "password": "abc@123",
+      "role": "student"
+    },
+    {
+      "id": 3,
+      "username": "admin_school",
+      "name": "Admin",
+      "password": "abc@123",
+      "role": "admin"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Getting Started",
+      "desc": "Please Start Adding New Notes Here",
+      "uploadedAt": 1630739446753,
+      "id": 1
+    }
+  ]
+}
